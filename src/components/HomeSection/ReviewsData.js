@@ -1,20 +1,18 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Slider from 'react-slick';
 // Import slick-carousel CSS files (leave this as is)
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import user_1 from '../assets/reviews_profileImage/user_1.jpeg';
-import user_2 from '../assets/reviews_profileImage/user_2.jpg';
-import user_3 from '../assets/reviews_profileImage/user_3.jpg';
-import user_4 from '../assets/reviews_profileImage/user_4.jpg';
-import user_5 from '../assets/reviews_profileImage/user_5.jpg';
-import user_6 from '../assets/reviews_profileImage/user_6.jpg';
-import user_7 from '../assets/reviews_profileImage/user_7.jpg';
+import user_1 from "../../assets/home/reviews_profileImage/user_1.webp"
+import user_2 from "../../assets/home/reviews_profileImage/user_2.webp"
+import user_3 from "../../assets/home/reviews_profileImage/user_3.webp"
+import user_4 from "../../assets/home/reviews_profileImage/user_4.webp"
+import user_5 from "../../assets/home/reviews_profileImage/user_5.webp"
+import user_6 from "../../assets/home/reviews_profileImage/user_6.webp"
+import user_7 from "../../assets/home/reviews_profileImage/user_7.webp"
 
 
-
-
-export default function Reviews() {
+export default function ReviewsData() {
     
 const ReviewsData = [
     {
@@ -35,7 +33,7 @@ const ReviewsData = [
       name: "Manoj Sharma",
       location: "Chennai",
       rating: 5,
-      reviewText: "I have been a loyal customer of Sree Sai Electronics for years. Their after-sales service is the best. My AC broke down after a year of use, but they quickly resolved the issue without any hassle. Fantastic service!",
+      reviewText: "I have been a loyal customer of Sree Sai Electronics for years. Their after-sales service is the best. My AC broke down after a year of use, but they quickly resolved the issue without any hassle.",
       image: user_3,
     },
     {
@@ -49,7 +47,7 @@ const ReviewsData = [
       name: "Sandeep Verma",
       location: "Delhi",
       rating: 5,
-      reviewText: "Sree Sai Electronics is the best place to buy electronics. The staff is knowledgeable, and the store atmosphere is friendly. They gave me great advice on selecting a refrigerator. I will continue to shop here!",
+      reviewText: "Sree Sai Electronics is the best place to buy electronics. The staff is knowledgeable, and the store atmosphere is friendly. They gave me great advice on selecting a refrigerator.",
       image: user_5,
     },
     {
@@ -63,16 +61,45 @@ const ReviewsData = [
       name: "Anjali Mehta",
       location: "Pune",
       rating: 4,
-      reviewText: "Great store with an excellent variety of products. The delivery was quick, and I received constant updates about my order. One minor issue, the packaging was not as secure as expected, but the product was fine.",
+      reviewText: "Great store with an excellent variety of products. The delivery was quick, and I received constant updates about my order. One minor issue, the packaging was not as secure as expected.",
       image: user_7,
     }
   ];
   
+
+    const [ReviewsSlidesToShow, setReviewsSlidesToShow] = useState(5);
+    const updateSlidesToShow = () => {
+      if (window.innerWidth >= 374) {
+        setReviewsSlidesToShow(1); // Show 2 slides for smaller screens
+      }
+      if (window.innerWidth <= 600) {
+        setReviewsSlidesToShow(1); // Show 2 slides for smaller screens
+      } else if (window.innerWidth <= 768) {
+        setReviewsSlidesToShow(2); // Show 3 slides for tablets
+      } else if (window.innerWidth <= 1024) {
+        setReviewsSlidesToShow(2); // Show 4 slides for larger tablets
+      } else {
+        setReviewsSlidesToShow(3); // Show 5 slides for larger screens
+      }
+    };
+  
+    // Use effect hook to update slidesToShow on window resize
+    useEffect(() => {
+      updateSlidesToShow(); // Set the initial slidesToShow based on screen size
+  
+      // Add event listener for window resize to update slidesToShow
+      window.addEventListener("resize", updateSlidesToShow);
+  
+      // Clean up the event listener on component unmount
+      return () => {
+        window.removeEventListener("resize", updateSlidesToShow);
+      };
+    }, []);
    
     const settings = {
       dots: true,
       infinite: true,
-      slidesToShow: 3,
+      slidesToShow: ReviewsSlidesToShow,
       slidesToScroll: 1,
       autoplay: true,
       speed: 10000,

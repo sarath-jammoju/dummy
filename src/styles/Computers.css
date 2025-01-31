@@ -100,9 +100,9 @@ body {
 /* Small screens (Phones, including iPhones and Google Pixel) */
 @media only screen and (max-width: 767px) {
   .HeroSection-container {
-    height: 200px; /* Reduced height for small screens */
+    height: 300px; /* Reduced height for small screens */
     margin-top: var(--space-md); /* Adjusted top margin */
-    width: 600px;
+    
   }
 
   .HeroSection-container img {
@@ -482,7 +482,7 @@ body {
   background-color: var(--color-light);
 }
 
-.contact-details h3, .contact-details h4 {
+.contact-details h3{
   font-size: var(--font-size-xl);
   color: var(--color-primary);
 }
@@ -492,6 +492,7 @@ body {
   color: var(--color-text-dark);
   line-height: var(--space-md);
 }
+
 
 /* =====================================================================
           Service,  Spares & Dialouge box   -   Media Queries
@@ -531,8 +532,11 @@ body {
     text-align: left;
   }
 
-  .contact-details h3, .contact-details h4 {
+  .contact-details h3 {
     font-size: var(--font-size-lg);
+  }
+  .contact-details h4{
+    font-size: var(--font-size-md);
   }
 
   .dialog-form-input {
@@ -570,8 +574,11 @@ body {
     font-size: var(--font-size-md); /* Larger font size */
   }
 
-  .contact-details h3, .contact-details h4 {
+  .contact-details h3 {
     font-size: var(--font-size-xl);
+  }
+  .contact-details h4{
+    font-size: var(--font-size-md);
   }
 }
 
@@ -601,8 +608,11 @@ body {
     gap: var(--space-lg);
   }
 
-  .contact-details h3, .contact-details h4 {
+  .contact-details h3 {
     font-size: var(--font-size-xxl);
+  }
+  .contact-details h4{
+    font-size: var(--font-size-lg);
   }
 }
 
@@ -619,11 +629,11 @@ body {
   }
 
   .dialog-box-header {
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-xxl);
   }
 
   .dialog-box-description {
-    font-size: var(--font-size-xxl);
+    font-size: var(--font-size-lg);
   }
 
   .dialog-form {
@@ -632,7 +642,10 @@ body {
     gap: var(--space-lg);
   }
 
-  .contact-details h3, .contact-details h4 {
-    font-size: var(--font-size-xxxl);
+  .contact-details h3 {
+    font-size: var(--font-size-xl);
+  }
+  .contact-details h4{
+    font-size: var(--font-size-lg);
   }
 }

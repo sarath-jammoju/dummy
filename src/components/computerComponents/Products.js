@@ -1,16 +1,16 @@
 import React, { Fragment } from "react";
-import accessories from "../assets/products/accessories.webp";
-import acer_laptop from "../assets/products/acer_laptop.webp";
-import asus_laptop from "../assets/products/asus_monitor.webp";
-import canon_printer from "../assets/products/canon_printer.webp";
-import dell_laptop from "../assets/products/dell_laptoo.webp";
-import desktop from "../assets/products/desktop.webp";
-import epson_printer from "../assets/products/epson_printer.webp";
-import epson_printer2 from "../assets/products/epson_printer2.webp";
-import hp_laptop from "../assets/products/hp_laptop.webp";
-import hp_monitor from "../assets/products/hp_monitor.webp";
-import spare_parts from "../assets/products/spare_parts.webp";
-import xerox_machine from "../assets/products/xerox_machine.webp";
+import accessories from "../../assets/coumputerAssets/products/accessories.webp";
+import acer_laptop from "../../assets/coumputerAssets/products/acer_laptop.webp";
+import asus_laptop from "../../assets/coumputerAssets/products/asus_monitor.webp"
+import canon_printer from "../../assets/coumputerAssets/products/canon_printer.webp"
+import dell_laptop from "../../assets/coumputerAssets/products/dell_laptoo.webp"
+import desktop from "../../assets/coumputerAssets/products/desktop.webp"
+import epson_printer from "../../assets/coumputerAssets/products/epson_printer.webp"
+import epson_printer2 from "../../assets/coumputerAssets/products/epson_printer2.webp"
+import hp_laptop from "../../assets/coumputerAssets/products/hp_laptop.webp"
+import hp_monitor from "../../assets/coumputerAssets/products/hp_monitor.webp"
+import spare_parts from "../../assets/coumputerAssets/products/spare_parts.webp"
+import xerox_machine from "../../assets/coumputerAssets/products/xerox_machine.webp"
 
 const Products = () => {
   const products = [
