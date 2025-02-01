@@ -1,6 +1,6 @@
-import React, {useState, useEffect,  Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { Link } from "react-router-dom";
-import "../styles/Home.css"
+import "../styles/Home.css";
 
 // Example categories data (could be fetched from an API or passed as props)
 const categories = [
@@ -13,7 +13,7 @@ const categories = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const closeDropdown = () => {
     setIsOpen(false);
   };
@@ -32,21 +32,30 @@ const Navbar = () => {
         <div className="middle-section"></div>
 
         {/* Right Section: Navigation Links */}
-        <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
+        <ul className={`nav-links ${isOpen ? "open" : ""}`}>
           <li className="nav-item">
-            <Link to="/Home" className="nav-link">Home</Link>
+            <Link to="/Home" className="nav-link">
+              Home
+            </Link>
           </li>
 
-          <li className="nav-item" onMouseLeave={closeDropdown}>
-          
-            <Link to="/services/security" onMouseEnter={() => setIsOpen(!isOpen)} className="nav-link">
+          <li
+            className="nav-item"
+            onMouseEnter={() => setIsOpen(true)}
+            onMouseLeave={() => setIsOpen(false)}
+          >
+            <Link to="/services/security" className="nav-link">
               Services
             </Link>
             {isOpen && (
               <ul className="dropdown-menu">
                 {categories.map((category) => (
                   <li key={category.path}>
-                    <Link to={`/services/${category.path}`} className="dropdown-item">
+                    <Link
+                      to={`/services/${category.path}`}
+                      className="dropdown-item"
+                      onClick={() => setIsOpen(false)} // Close dropdown on click
+                    >
                       {category.label}
                     </Link>
                   </li>
@@ -56,17 +65,14 @@ const Navbar = () => {
           </li>
 
           <li className="nav-item">
-            <Link to="/contactUs" className="nav-link">Contact us</Link>
+            <Link to="/contactUs" className="nav-link">
+              Contact us
+            </Link>
           </li>
-        </ul>      
+        </ul>
       </nav>
     </Fragment>
   );
 };
 
 export default Navbar;
-
-
-
-
-

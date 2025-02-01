@@ -100,7 +100,7 @@ body {
 /* Small screens (Phones, including iPhones and Google Pixel) */
 @media only screen and (max-width: 767px) {
   .HeroSection-container {
-    height: 300px; /* Reduced height for small screens */
+    height: 150px; /* Reduced height for small screens */
     margin-top: 1px; /* Adjusted top margin */
     
   }
@@ -121,7 +121,11 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .HeroSection-container {
     height: 400px; /* Adjusted height for tablets */
-    margin-top: var(--space-lg); /* Adjusted top margin */
+    margin-top: 1px /* Adjusted top margin */
+  }
+  .HeroSection-container img {
+    object-position: center; /* Center image for better coverage */
+    width: 100%;
   }
 
   .HeroSection-container h2 {
@@ -134,8 +138,13 @@ body {
 /* Large screens (Desktops and larger tablets) */
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
   .HeroSection-container {
-    height: 550px; /* Default height for larger screens */
-    margin-top: var(--space-xl); /* Default margin */
+    height: 400px; /* Default height for larger screens */
+    margin-top: 1px; /* Default margin */
+    
+  }
+  .HeroSection-container img {
+    object-position: center; /* Center image for better coverage */
+    width: 100%;
   }
 
   .HeroSection-container h2 {
@@ -148,7 +157,11 @@ body {
 @media only screen and (min-width: 1441px) {
   .HeroSection-container {
     height: 600px; /* Increased height for very large screens */
-    margin-top: var(--space-xl); /* Default margin */
+    margin-top: 1px /* Default margin */
+  }
+  .HeroSection-container img {
+    object-position: center; /* Center image for better coverage */
+    width: 100%;
   }
 
   .HeroSection-container h2 {
@@ -255,7 +268,7 @@ body {
 }
 
 .product-card img {
-  width: 100%; /* Make the image responsive */
+  width: 320px; /* Make the image responsive */
   height: auto; /* Adjust height based on width */
   object-fit: cover;
   border-radius: var(--border-radius-md);
@@ -293,7 +306,7 @@ body {
   }
 
   .product-card img {
-    height: 200px; /* Limit image height */
+    height: 250px; /* Limit image height */
   }
 
   .product-card h3 {
@@ -339,7 +352,7 @@ body {
   }
 
   .product-cards-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3-column layout */
+    grid-template-columns: repeat(2, 1fr); /* 3-column layout */
   }
 
   .product-card img {
