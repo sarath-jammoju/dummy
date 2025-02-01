@@ -6,7 +6,7 @@ import Products from '../components/HomeSection/Products.js';
 import WhyChooseUs from '../components/HomeSection/WhyChooseUs.js';
 import Clients from '../components/HomeSection/Clients.js';
 import ReviewsData from '../components/HomeSection/ReviewsData.js';
-import GoogleMapEmbed from '../components/HomeSection/GoogleMapEmbed.js';
+
 
 
 const Home = () => {
@@ -18,7 +18,6 @@ const Home = () => {
       <WhyChooseUs />
       <Clients />
       <ReviewsData />
-      <GoogleMapEmbed />
     </>
   );
 };

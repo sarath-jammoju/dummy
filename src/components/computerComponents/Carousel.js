@@ -3,15 +3,15 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import acer_logo from "../../assets/coumputerAssets/logos/acer_logo.webp";
-import asus_logo from "../../assets/coumputerAssets/logos/acer_logo.webp"
-import dell_logo from "../../assets/coumputerAssets/logos/acer_logo.webp"
-import hp_logo from "../../assets/coumputerAssets/logos/acer_logo.webp"
-import lenovo_logo from "../../assets/coumputerAssets/logos/acer_logo.webp"
-import samsung_logo from "../../assets/coumputerAssets/logos/acer_logo.webp"
-import zebronics_logo from "../../assets/coumputerAssets/logos/acer_logo.webp"
-import epson_logo from "../../assets/coumputerAssets/logos/acer_logo.webp"
-import canon_logo from "../../assets/coumputerAssets/logos/acer_logo.webp"
-import brother_logo from "../../assets/coumputerAssets/logos/acer_logo.webp"
+import asus_logo from "../../assets/coumputerAssets/logos/asus_logo.webp"
+import dell_logo from "../../assets/coumputerAssets/logos/dell_logo.webp"
+import hp_logo from "../../assets/coumputerAssets/logos/hp_logo.webp"
+import lenovo_logo from "../../assets/coumputerAssets/logos/lenovo_logo.webp"
+import samsung_logo from "../../assets/coumputerAssets/logos/samsung_logo.webp"
+import zebronics_logo from "../../assets/coumputerAssets/logos/zebronics_logo.webp"
+import epson_logo from "../../assets/coumputerAssets/logos/epson_logo.webp"
+import canon_logo from "../../assets/coumputerAssets/logos/canon_logo.webp"
+import brother_logo from "../../assets/coumputerAssets/logos/brother_logo.webp"
 
 
 
@@ -28,6 +28,7 @@ const partnerLogos = [
   canon_logo,
   brother_logo,
 ];
+
 
 const Carousel = () => {
   // State to store the slidesToShow based on screen size

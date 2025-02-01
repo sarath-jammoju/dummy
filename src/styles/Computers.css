@@ -101,7 +101,7 @@ body {
 @media only screen and (max-width: 767px) {
   .HeroSection-container {
     height: 300px; /* Reduced height for small screens */
-    margin-top: var(--space-md); /* Adjusted top margin */
+    margin-top: 1px; /* Adjusted top margin */
     
   }
 
@@ -293,15 +293,19 @@ body {
   }
 
   .product-card img {
-    height: 500px; /* Limit image height */
+    height: 200px; /* Limit image height */
   }
 
   .product-card h3 {
-    font-size: var(--font-size-md); /* Adjust font size */
+    font-size: var(--font-size-lg); /* Adjust font size */
+    color: var(--color-primary);
   }
 
   .product-card h4 {
-    font-size: var(--font-size-xs); /* Adjust font size */
+    font-size: var(--font-size-md); /* Adjust font size */
+    color: black;
+    text-align: start;
+    font-weight: 300;
   }
 }
 
@@ -422,10 +426,11 @@ body {
 }
 
 .dialog-form-label {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-lg);
   color: var(--color-text-dark);
   display: block;
   margin-bottom: var(--space-xs);
+  font-weight: 500;
 }
 
 .dialog-form-input {
@@ -483,13 +488,13 @@ body {
 }
 
 .contact-details h3{
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xxl);
   color: var(--color-primary);
 }
 
 .contact-details h4 {
   font-size: var(--font-size-md);
-  color: var(--color-text-dark);
+  color: var(--background-tertiary);
   line-height: var(--space-md);
 }
 
