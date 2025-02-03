@@ -383,11 +383,14 @@ body {
   }
 
   .product-card h3 {
-    font-size: var(--font-size-xxl); /* Larger font size for titles */
+    font-size: var(--font-size-xl); /* Larger font size for titles */
+    color: var(--color-primary);
   }
 
   .product-card h4 {
-    font-size: var(--font-size-lg); /* Larger font size for descriptions */
+    font-size: var(--font-size-md); /* Larger font size for descriptions */
+    color: var(--background-tertiary);
+    text-align: start;
   }
 }
 

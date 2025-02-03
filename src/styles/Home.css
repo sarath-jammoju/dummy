@@ -502,6 +502,7 @@
 /* ==================================================
          Media Queries for Product Section
 ===================================================== */
+
 /* Small screens (Phones, including iPhones and Google Pixel) */
 @media only screen and (max-width: 767px) {
   .products-header {
@@ -776,7 +777,7 @@
 /* Extra large screens (Larger Desktops) */
 @media only screen and (min-width: 1441px) {
   .why-choose-us-container h2 {
-    font-size: var(--font-size-xxxl); /* Extra large font size for large screens */
+    font-size: var(--font-size-xxl); /* Extra large font size for large screens */
   }
 
   .why-choose-us-content {
@@ -790,7 +791,7 @@
   }
 
   .why-item p {
-    font-size: var(--font-size-lg); /* Larger font size for descriptions */
+    font-size: var(--font-size-md); /* Larger font size for descriptions */
   }
 }
 
